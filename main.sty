@@ -4,13 +4,16 @@
 
 \usepackage[utf8]{}                              % encoding
 
+\usepackage[dvipsnames]{xcolor}                  % text colors
 \usepackage[english]{babel}                      % default language
+\usepackage[verbose=true,a4paper]{geometry}      %
 \usepackage{accsupp}                             % disable text selection
 \usepackage{algorithm}                           % algorithms
 \usepackage{algpseudocode}                       % algorithms
 \usepackage{amsfonts}                            % blackboard math symbols
 \usepackage{booktabs}                            % professional-quality tables
 \usepackage{caption}                             % captions
+\usepackage{fancyhdr}                            %
 \usepackage{fontspec}                            % fonts
 \usepackage{graphicx}                            % images
 \usepackage{hyperref}                            % hyperlinks
@@ -82,15 +85,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % set page geometry
-\usepackage[verbose=true,a4paper]{geometry}
 \AtBeginDocument{
   \newgeometry{
-    textheight=9in,
-    textwidth=6.5in,
+    textheight=10in,
+    textwidth=6in,
     top=1in,
-    headheight=14pt,
-    headsep=25pt,
-    footskip=30pt
+    headheight=15pt,
+    headsep=20pt,
+    footskip=20pt
   }
 }
 
@@ -98,24 +100,48 @@
 \clubpenalty=10000
 \flushbottom
 \sloppy
-
-\usepackage{fancyhdr}
 \fancyhf{}
 \pagestyle{fancy}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% define colors
+\definecolor{c000}{rgb}{0.00, 0.00, 0.00}
+\definecolor{c005}{rgb}{0.05, 0.05, 0.05}
+\definecolor{c010}{rgb}{0.10, 0.10, 0.10}
+\definecolor{c020}{rgb}{0.20, 0.20, 0.20}
+\definecolor{c030}{rgb}{0.30, 0.30, 0.30}
+\definecolor{c040}{rgb}{0.40, 0.40, 0.40}
+\definecolor{c050}{rgb}{0.50, 0.50, 0.50}
+\definecolor{c060}{rgb}{0.60, 0.60, 0.60}
+\definecolor{c070}{rgb}{0.70, 0.70, 0.70}
+\definecolor{c080}{rgb}{0.80, 0.80, 0.80}
+\definecolor{c090}{rgb}{0.90, 0.90, 0.90}
+\definecolor{c095}{rgb}{0.95, 0.95, 0.95}
+\definecolor{c100}{rgb}{1.00, 1.00, 1.00}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % header
 \renewcommand{\headrulewidth}{0pt}
 \fancyheadoffset{0pt}
-\lhead{\noselect{\today}}
-\chead{\noselect{Han}}
-\rhead{\noselect{Page \thepage \hspace{1pt} of \pageref{LastPage}}}
+\lhead{\textcolor{c070}{\noselect{
+  \today
+}}}
+\chead{\textcolor{c070}{\noselect{
+  Han
+}}}
+\rhead{\textcolor{c070}{\noselect{
+  Page \thepage \hspace{1pt} of \pageref{LastPage}
+}}}
 
 % footer
-\lfoot{\noselect{}}
-\cfoot{\noselect{}}
-\rfoot{\noselect{}}
+\lfoot{\textcolor{c070}{\noselect{
+}}}
+\cfoot{\textcolor{c070}{\noselect{
+}}}
+\rfoot{\textcolor{c070}{\noselect{
+}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -307,8 +333,7 @@
     \linewidth\hsize
     \vskip 0.1in
     %\@toptitlebar
-    \centering
-    {\Huge\sc \@title\par}
+    \centering{\Huge\textbf\@title\par}
     %\@bottomtitlebar
     \textsc{}\\
     \vskip 0.1in
