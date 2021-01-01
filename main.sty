@@ -13,6 +13,7 @@
 \usepackage{booktabs}                            % professional-quality tables
 \usepackage{caption}                             % captions
 \usepackage{fancyhdr}                            %
+\usepackage{float}                               % float images
 \usepackage{fontspec}                            % fonts
 \usepackage{graphicx}                            % images
 \usepackage{hyperref}                            % hyperlinks
@@ -28,7 +29,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % define graphics path
-\graphicspath{{./assets/images}}
+\graphicspath{{./assets/images/}{../../assets/images/}}
 
 % define noselect function
 \DeclareRobustCommand\noselect[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}

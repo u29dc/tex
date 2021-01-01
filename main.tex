@@ -1,5 +1,7 @@
 \documentclass{article}
+
 \usepackage{main}
+\usepackage{subfiles}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -25,14 +27,15 @@
 \include{src/abstract}                           % summary
 
 % chapters
-\include{src/chapters/chapter1}                  % chapter 1
-\include{src/chapters/chapter2}                  % chapter 2
-\include{src/chapters/chapter3}                  % chapter 3
+\newpage\subfile{src/chapters/chapter1}          % chapter 1
+\newpage\subfile{src/chapters/chapter2}          % chapter 2
+\newpage\subfile{src/chapters/chapter3}          % chapter 3
 
+\newpage
 \texttt{\noselect{\listoffigures}}               % list of figures
 
-\newpage                                         % bibliography
-\bibliographystyle{unsrt}
+\newpage
+\bibliographystyle{unsrt}                        % bibliography
 \texttt{
   \noselect{
     \bibliography{src/_references}
