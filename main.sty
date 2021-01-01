@@ -4,7 +4,6 @@
 
 \usepackage[utf8]{}                              % encoding
 
-\usepackage[T1]{fontenc}                         % use 8-bit T1 fonts
 \usepackage{accsupp}                             % disable text selection
 \usepackage{algorithm}                           % algorithms
 \usepackage{algpseudocode}                       % algorithms
@@ -40,28 +39,43 @@
 \renewcommand{\rmdefault}{bch}
 \renewcommand{\sfdefault}{phv}
 
-\setmainfont{Times New Roman}
+\setmainfont[
+  Path = ./assets/fonts/inter/, 
+  Extension      = .otf                           ,
+  UprightFont    = *-Regular                      ,
+  ItalicFont     = *-Italic                       ,
+  BoldFont       = *-SemiBold                     ,
+  BoldItalicFont = *-SemiBoldItalic               ,
+]{Inter}
 
-% Inter
-%\setromanfont[
-%BoldFont=assets/fonts/inter/Inter-SemiBold.otf,
-%ItalicFont=assets/fonts/inter/Inter-Italic.otf,,
-%BoldItalicFont=assets/fonts/inter/Inter-SemiBoldItalic.otf,
-%]{assets/fonts/inter/Inter-Regular.otf}
+\setsansfont[
+  Path = ./assets/fonts/inter/, 
+  Extension      = .otf                           ,
+  UprightFont    = *-Regular                      ,
+  ItalicFont     = *-Italic                       ,
+  BoldFont       = *-SemiBold                     ,
+  BoldItalicFont = *-SemiBoldItalic               ,
+]{Inter}
 
-% Inter
-%\setsansfont[
-%BoldFont=assets/fonts/inter/Inter-SemiBold.otf,
-%ItalicFont=assets/fonts/inter/Inter-Italic.otf,,
-%BoldItalicFont=assets/fonts/inter/Inter-SemiBoldItalic.otf,
-%]{assets/fonts/inter/Inter-Regular.otf}
+\setromanfont[
+  Path = ./assets/fonts/inter/, 
+  Extension      = .otf                           ,
+  UprightFont    = *-Regular                      ,
+  ItalicFont     = *-Italic                       ,
+  BoldFont       = *-SemiBold                     ,
+  BoldItalicFont = *-SemiBoldItalic               ,
+]{Inter}
 
-% Space Mono
-%\setmonofont[
-%BoldFont=assets/fonts/space_mono/SpaceMono-Bold.ttf,
-%ItalicFont=assets/fonts/space_mono/SpaceMono-Italic.ttf,
-%BoldItalicFont=assets/fonts/space_mono/SpaceMono-BoldItalic.ttf,
-%]{assets/fonts/space_mono/SpaceMono-Regular.ttf}
+\setmonofont[
+  Path = ./assets/fonts/space_mono/, 
+  Extension      = .ttf                           ,
+  UprightFont    = *-Regular                      ,
+  ItalicFont     = *-Italic                       ,
+  BoldFont       = *-Bold                         ,
+  BoldItalicFont = *-BoldItalic                   ,
+]{SpaceMono}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
