@@ -2,26 +2,31 @@
 
 \ProcessOptions\relax
 
-\usepackage[utf8]{}                              % utf-8 input
+\usepackage[utf8]{}                              % encoding
+
 \usepackage[T1]{fontenc}                         % use 8-bit T1 fonts
-\usepackage{hyperref}                            % hyperlinks
-\usepackage{url}                                 % simple URL typesetting
-\usepackage{booktabs}                            % professional-quality tables
-\usepackage{amsfonts}                            % blackboard math symbols
-\usepackage{nicefrac}                            % compact symbols for 1/2, etc.
+\usepackage{accsupp}                             % disable text selection
 \usepackage{algorithm}                           % algorithms
 \usepackage{algpseudocode}                       % algorithms
+\usepackage{amsfonts}                            % blackboard math symbols
+\usepackage{booktabs}                            % professional-quality tables
 \usepackage{caption}                             % captions
-\usepackage{microtype}                           % microtypography
-\usepackage{lipsum}                              % lorem ipsum generator
-\usepackage{lastpage}                            % page numbers
-\usepackage{accsupp}                             % disable text selection
-\usepackage{lscape}                              % landscape mode for visuals
+\usepackage{fontspec}                            % fonts
 \usepackage{graphicx}                            % images
-\graphicspath{{./assets/images}}
+\usepackage{hyperref}                            % hyperlinks
+\usepackage{lastpage}                            % page numbers
+\usepackage{lipsum}                              % lorem ipsum generator
+\usepackage{lscape}                              % landscape mode for visuals
+\usepackage{microtype}                           % microtypography
+\usepackage{nicefrac}                            % compact symbols for 1/2, etc.
+\usepackage{url}                                 % simple URL typesetting
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% define graphics path
+\graphicspath{{./assets/images}}
+
+% define noselect function
 \DeclareRobustCommand\noselect[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
 
 % remove the numbering of the algorithm
@@ -32,8 +37,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % fonts
-\usepackage{fontspec}
-
 \renewcommand{\rmdefault}{bch}
 \renewcommand{\sfdefault}{phv}
 
