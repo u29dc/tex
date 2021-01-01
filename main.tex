@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{main}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{DOCUMENT TITLE}
+
+\author{
+  Author Name\thanks{Author footnote} \\
+  Subtitle\\
+  Company\\
+  \texttt{mail@example.com} \\
+}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\include{components/cover}
+
+\newpage
+\noselect{\tableofcontents}                      % table of contents
+
+\include{components/chapters/abstract}           % executive summary
+\include{components/chapters/chapter1}           % chapter
+\include{components/chapters/chapter2}           % chapter
+\include{components/chapters/chapter3}           % chapter
+
+\noselect{\listoffigures}                        % list of figures
+
+\bibliographystyle{unsrt}  
+\bibliography{components/bibliography}           % bibliography
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
