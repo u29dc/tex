@@ -9,6 +9,9 @@
 \usepackage{booktabs}                            % professional-quality tables
 \usepackage{amsfonts}                            % blackboard math symbols
 \usepackage{nicefrac}                            % compact symbols for 1/2, etc.
+\usepackage{algorithm}                           % algorithms
+\usepackage{algpseudocode}                       % algorithms
+\usepackage{caption}                             % captions
 \usepackage{microtype}                           % microtypography
 \usepackage{lipsum}                              % lorem ipsum generator
 \usepackage{lastpage}                            % page numbers
@@ -16,7 +19,14 @@
 \usepackage{graphicx}                            % images
 \graphicspath{{./assets/images}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \DeclareRobustCommand\noselect[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
+
+% remove the Numbering of the Algorithm
+\DeclareCaptionLabelFormat{algnonumber}{Algorithm}
+\captionsetup[algorithm]{labelformat = algnonumber}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

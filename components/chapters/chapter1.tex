@@ -15,3 +15,16 @@
 \subsubsection{Sub subsection}
 
 \lipsum[6]
+
+\begin{algorithm}
+	\caption{Sort an array using Divide and Conquer approach}
+	\begin{algorithmic}[1]
+		\Function{quick\_sort}{$arr,\ low,\ high$}
+			\If{$low < high$}
+				\State $pi\ \gets\ $\textbf{\textit{Partition}}$(arr,\ low,\ high)$
+				\State \textbf{quick\_sort}$(arr,\ low,\ pi\ -\ 1)$
+				\State \textbf{quick\_sort}$(arr,\ pi\ +\ 1,\ high)$
+			\EndIf
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
