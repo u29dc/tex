@@ -4,7 +4,6 @@
 
 \usepackage[utf8]{}                              % encoding
 
-\usepackage[dvipsnames]{xcolor}                  % text colors
 \usepackage[english]{babel}                      % default language
 \usepackage[verbose=true,a4paper]{geometry}      %
 \usepackage{accsupp}                             % disable text selection
@@ -24,6 +23,7 @@
 \usepackage{multicol}                            % multi columns
 \usepackage{nicefrac}                            % compact symbols for 1/2, etc.
 \usepackage{url}                                 % simple URL typesetting
+\usepackage{xcolor}                              % text colors
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,7 +36,6 @@
 % remove the numbering of the algorithm
 \DeclareCaptionLabelFormat{algnonumber}{Algorithm}
 \captionsetup[algorithm]{labelformat = algnonumber}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -368,7 +367,7 @@
 \renewenvironment{abstract}
 {
   \centerline
-  {\large \bfseries \scshape EXECUTIVE SUMMARY}
+  {\LARGE\bfseries\textbf\scshape{EXECUTIVE SUMMARY}}
   \begin{quote}
 }
 {
