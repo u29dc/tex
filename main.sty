@@ -126,10 +126,10 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyheadoffset{0pt}
 \lhead{\textcolor{c070}{\noselect{
-  \today
+  \@title
 }}}
 \chead{\textcolor{c070}{\noselect{
-  Han
+  \@author
 }}}
 \rhead{\textcolor{c070}{\noselect{
   Page \thepage \hspace{1pt} of \pageref{LastPage}
@@ -141,6 +141,7 @@
 \cfoot{\textcolor{c070}{\noselect{
 }}}
 \rfoot{\textcolor{c070}{\noselect{
+  \today
 }}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -331,22 +332,17 @@
   \noselect{\vbox{%
     \hsize\textwidth
     \linewidth\hsize
-    \vskip 0.1in
-    %\@toptitlebar
-    \centering{\Huge\textbf\@title\par}
-    %\@bottomtitlebar
+    \centering{\Huge\textbf{\@title}\par}
     \textsc{}\\
-    \vskip 0.1in
-    \def\And{%
+    \def\And{
       \end{tabular}\hfil\linebreak[0]\hfil%
       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
     }
-    \def\AND{%
+    \def\AND{
       \end{tabular}\hfil\linebreak[4]\hfil%
       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
     }
-    \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
-  \vskip 0.4in \@minus 0.1in \center{\today}   \vskip 0.2in
+    \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}\center{\today}
   }}
 }
 
