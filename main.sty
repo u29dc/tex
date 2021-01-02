@@ -313,20 +313,6 @@
   \let\thanks\relax
 }
 
-% rules for title box at top of first page
-\newcommand{\@toptitlebar}{
-  \hrule height 2\p@
-  \vskip 0.25in
-  \vskip -\parskip%
-}
-\newcommand{\@bottomtitlebar}{
-  \vskip 0.29in
-  \vskip -\parskip
-  \hrule height 2\p@
-  \vskip 0.09in%
-}
-
-% create title
 \providecommand{\@maketitle}{}
 \renewcommand{\@maketitle}{%
   \noselect{\vbox{%
