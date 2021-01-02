@@ -4,32 +4,32 @@
 
 \usepackage[utf8]{}                              % encoding
 
-\usepackage[english]{babel}                      % default language
-\usepackage[verbose=true,a4paper]{geometry}      %
-\usepackage{accsupp}                             % disable text selection
+\usepackage[english]{babel}                      % language
+\usepackage[verbose=true,a4paper]{geometry}      % paper geometry
+\usepackage{accsupp}                             % text selection
 \usepackage{algorithm}                           % algorithms
 \usepackage{algpseudocode}                       % algorithms
-\usepackage{amsfonts}                            % blackboard math symbols
-\usepackage{booktabs}                            % professional-quality tables
+\usepackage{amsfonts}                            % math symbols
+\usepackage{booktabs}                            % tables
 \usepackage{caption}                             % captions
-\usepackage{fancyhdr}                            %
+\usepackage{fancyhdr}                            % fancyhdr
 \usepackage{float}                               % float images
 \usepackage{fontspec}                            % fonts
 \usepackage{graphicx}                            % images
 \usepackage{hyperref}                            % hyperlinks
 \usepackage{lastpage}                            % page numbers
 \usepackage{lipsum}                              % lorem ipsum generator
-\usepackage{lscape}                              % landscape mode for visuals
+\usepackage{lscape}                              % landscape
 \usepackage{microtype}                           % microtypography
 \usepackage{multicol}                            % multi columns
 \usepackage{nicefrac}                            % compact symbols for 1/2, etc.
-\usepackage{url}                                 % simple URL typesetting
+\usepackage{url}                                 % url typesetting
 \usepackage{xcolor}                              % text colors
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % define graphics path
-\graphicspath{{./assets/images/}{../../assets/images/}}
+\graphicspath{{./assets/images/}}
 
 % define noselect function
 \DeclareRobustCommand\noselect[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}

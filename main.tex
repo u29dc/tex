@@ -13,23 +13,25 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\include{src/cover}
-
+% table of contents
 \newpage
-\texttt{\noselect{\tableofcontents}}             % table of contents
+\texttt{\noselect{\tableofcontents}}
 
-\include{src/abstract}                           % summary
+% summary
+\include{src/summary}
 
-% chapters
-\newpage\subfile{src/chapters/chapter1}          % chapter 1
-\newpage\subfile{src/chapters/chapter2}          % chapter 2
-\newpage\subfile{src/chapters/chapter3}          % chapter 3
+% contents
+\newpage\subfile{src/chapters/chapter1}
+\newpage\subfile{src/chapters/chapter2}
+\newpage\subfile{src/chapters/chapter3}
 
+% list of figures
 \newpage
-\texttt{\noselect{\listoffigures}}               % list of figures
+\texttt{\noselect{\listoffigures}}
 
+% bibliography
 \newpage
-\bibliographystyle{unsrt}                        % bibliography
+\bibliographystyle{unsrt}
 \texttt{
   \noselect{
     \bibliography{src/_references}
