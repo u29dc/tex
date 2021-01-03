@@ -5,6 +5,7 @@
 \usepackage[utf8]{}                              % encoding
 
 \usepackage[english]{babel}                      % language
+\usepackage[style=iso]{datetime2}                % date formatting
 \usepackage[verbose=true,a4paper]{geometry}      % paper geometry
 \usepackage{accsupp}                             % text selection
 \usepackage{algorithm}                           % algorithms
@@ -132,7 +133,7 @@
   \@author
 }}}
 \rhead{\textcolor{c070}{\noselect{
-  Page \thepage \hspace{1pt} of \pageref{LastPage}
+  \today
 }}}
 
 % footer
@@ -140,7 +141,8 @@
 }}}
 \cfoot{\textcolor{c070}{\noselect{
 }}}
-\rfoot{\textcolor{c070}{\noselect{
+\rfoot{\textcolor{c010}{\noselect{
+  Page \thepage \hspace{1pt} of \pageref{LastPage}
 }}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -160,7 +162,7 @@
 % use text color instead of boxes
 \hypersetup{
   colorlinks= true,
-  linkcolor={c070},
+  linkcolor={c010},
   citecolor={c050},
   urlcolor={c030}
 }
@@ -203,7 +205,8 @@
       \end{tabular}\hfil\linebreak[4]\hfil%
       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
     }
-    \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}\center{\today}
+    \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}
+    \center{\textcolor{c070}{\noselect{\today}}}
   }}
 }
 
