@@ -27,6 +27,7 @@
 \usepackage{hyperref}                            % hyperlinks
 \usepackage{lastpage}                            % page numbers
 \usepackage{lipsum}                              % lorem ipsum generator
+\usepackage{listings}                            % code blocks
 \usepackage{longtable}                           % tables
 \usepackage{lscape}                              % landscape
 \usepackage{marginfix}                           % margin notes
@@ -60,6 +61,23 @@
 % remove the numbering of the algorithm
 \DeclareCaptionLabelFormat{algnonumber}{Algorithm}
 \captionsetup[algorithm]{labelformat = algnonumber}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% define colors
+\definecolor{c000}{rgb}{0.00, 0.00, 0.00}
+\definecolor{c005}{rgb}{0.05, 0.05, 0.05}
+\definecolor{c010}{rgb}{0.10, 0.10, 0.10}
+\definecolor{c020}{rgb}{0.20, 0.20, 0.20}
+\definecolor{c030}{rgb}{0.30, 0.30, 0.30}
+\definecolor{c040}{rgb}{0.40, 0.40, 0.40}
+\definecolor{c050}{rgb}{0.50, 0.50, 0.50}
+\definecolor{c060}{rgb}{0.60, 0.60, 0.60}
+\definecolor{c070}{rgb}{0.70, 0.70, 0.70}
+\definecolor{c080}{rgb}{0.80, 0.80, 0.80}
+\definecolor{c090}{rgb}{0.90, 0.90, 0.90}
+\definecolor{c095}{rgb}{0.95, 0.95, 0.95}
+\definecolor{c100}{rgb}{1.00, 1.00, 1.00}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -150,23 +168,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% define colors
-\definecolor{c000}{rgb}{0.00, 0.00, 0.00}
-\definecolor{c005}{rgb}{0.05, 0.05, 0.05}
-\definecolor{c010}{rgb}{0.10, 0.10, 0.10}
-\definecolor{c020}{rgb}{0.20, 0.20, 0.20}
-\definecolor{c030}{rgb}{0.30, 0.30, 0.30}
-\definecolor{c040}{rgb}{0.40, 0.40, 0.40}
-\definecolor{c050}{rgb}{0.50, 0.50, 0.50}
-\definecolor{c060}{rgb}{0.60, 0.60, 0.60}
-\definecolor{c070}{rgb}{0.70, 0.70, 0.70}
-\definecolor{c080}{rgb}{0.80, 0.80, 0.80}
-\definecolor{c090}{rgb}{0.90, 0.90, 0.90}
-\definecolor{c095}{rgb}{0.95, 0.95, 0.95}
-\definecolor{c100}{rgb}{1.00, 1.00, 1.00}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % header
 \renewcommand{\headrulewidth}{0pt}
 \fancyheadoffset{0pt}
@@ -210,6 +211,22 @@
   citecolor={c050},
   urlcolor={c030}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% listings
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true
+  numbers=left,
+  frame=none,
+  tabsize=4,
+  showspaces=false,
+  showtabs=false,
+}
+
+% algorithms
+\algrenewcommand\ALG@beginalgorithmic{\footnotesize\ttfamily}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
