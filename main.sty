@@ -62,6 +62,9 @@
 \DeclareCaptionLabelFormat{algnonumber}{Algorithm}
 \captionsetup[algorithm]{labelformat = algnonumber}
 
+% define function for multi line comments
+\newcommand{\comment}[1]{}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % define colors
@@ -275,16 +278,30 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% define summary to replace abstract
+% can be used both in article and book document class
+
 % create abstract
-\renewenvironment{abstract}
+% \renewenvironment{abstract}
+% {
+%   \vspace*{\fill}\centerline
+%   {\LARGE\textbf{Executive Summary}}
+%   \justify\begin{adjustwidth}{1cm}{1cm}
+%   \begin{quote}
+% }
+% {
+%   \end{quote}
+%   \end{adjustwidth}
+%   \vspace*{\fill}
+% }
+
+\newenvironment{summary}
 {
   \vspace*{\fill}\centerline
   {\LARGE\textbf{Executive Summary}}
   \justify\begin{adjustwidth}{1cm}{1cm}
-  \begin{quote}
 }
 {
-  \end{quote}
   \end{adjustwidth}
   \vspace*{\fill}
 }
