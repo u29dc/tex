@@ -4,7 +4,15 @@
 
 \lipsum[10]
 
-\begin{figure}[h]
+\begin{verbatim}
+>> syms x, int(1/(1-x^4))
+ans =
+atan(x)/2 + atanh(x)/2
+\end{verbatim}
+
+\lipsum[20]
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{example1}
     \caption{A half text width image}
@@ -23,7 +31,7 @@ See Figure \ref{fig:blackbox}. Here is how you add footnotes.\footnote{Sample fo
   \url{https://example.com}
 \end{center}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \fbox{\rule[-0.5cm]{4cm}{4cm} \rule[-0.5cm]{4cm}{0cm}}
   \caption{A black box}
@@ -31,3 +39,5 @@ See Figure \ref{fig:blackbox}. Here is how you add footnotes.\footnote{Sample fo
 \end{figure}
 
 \lipsum[9]
+
+\lipsum[2]
