@@ -102,6 +102,17 @@
 % set default font to sans-serif
 \renewcommand{\familydefault}{\sfdefault}
 
+% font sizes
+\renewcommand\tiny{\@setfontsize       \tiny       {5}{6}}
+\renewcommand\scriptsize{\@setfontsize \scriptsize {7}{8}}
+\renewcommand\small{\@setfontsize      \small      {9}{12}}
+\renewcommand\normalsize{\@setfontsize \normalsize {10}{14}}
+\renewcommand\large{\@setfontsize      \large      {13}{18}}
+\renewcommand\Large{\@setfontsize      \Large      {15}{19}}
+\renewcommand\LARGE{\@setfontsize      \LARGE      {20}{30}}
+\renewcommand\huge{\@setfontsize       \huge       {30}{45}}
+\renewcommand\Huge{\@setfontsize       \Huge       {50}{70}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % set page geometry
@@ -211,6 +222,7 @@
 
 \providecommand{\@maketitle}{}
 \renewcommand{\@maketitle}{%
+  \vspace*{\fill}
   \noselect{\vbox{%
     \hsize\textwidth
     \linewidth\hsize
@@ -227,6 +239,7 @@
     \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}
     \center{\textcolor{c070}{\noselect{\texttt{\today}}}}
   }}
+  \vspace*{\fill}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
