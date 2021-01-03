@@ -126,24 +126,24 @@
 % header
 \renewcommand{\headrulewidth}{0pt}
 \fancyheadoffset{0pt}
-\lhead{\textcolor{c070}{\noselect{
-  \@title
-}}}
-\chead{\textcolor{c070}{\noselect{
-  \@author
-}}}
-\rhead{\textcolor{c070}{\noselect{
-  \today
-}}}
+\lhead{\textcolor{c070}{\noselect{\texttt{
+\@title
+}}}}
+\chead{\textcolor{c070}{\noselect{\texttt{
+\@author
+}}}}
+\rhead{\textcolor{c070}{\noselect{\texttt{
+\today
+}}}}
 
 % footer
-\lfoot{\textcolor{c070}{\noselect{
-}}}
-\cfoot{\textcolor{c070}{\noselect{
-}}}
-\rfoot{\textcolor{c010}{\noselect{
-  Page \thepage \hspace{1pt} of \pageref{LastPage}
-}}}
+\lfoot{\textcolor{c070}{\noselect{\texttt{
+}}}}
+\cfoot{\textcolor{c070}{\noselect{\texttt{
+}}}}
+\rfoot{\textcolor{c010}{\noselect{\texttt{
+\thepage/\pageref{LastPage}
+}}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -206,7 +206,7 @@
       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
     }
     \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}
-    \center{\textcolor{c070}{\noselect{\today}}}
+    \center{\textcolor{c070}{\noselect{\texttt{\today}}}}
   }}
 }
 
