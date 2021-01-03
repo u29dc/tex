@@ -4,6 +4,7 @@
 
 \usepackage[utf8]{}                              % encoding
 
+\usepackage[document]{ragged2e}                  % justify left
 \usepackage[english]{babel}                      % language
 \usepackage[style=iso]{datetime2}                % date formatting
 \usepackage[verbose=true,a4paper]{geometry}      % paper geometry
@@ -13,6 +14,7 @@
 \usepackage{amsfonts}                            % math symbols
 \usepackage{booktabs}                            % tables
 \usepackage{caption}                             % captions
+\usepackage{changepage}                          % adjustments in a page
 \usepackage{fancyhdr}                            % fancyhdr
 \usepackage{float}                               % float images
 \usepackage{fontspec}                            % fonts
@@ -34,6 +36,12 @@
 
 % define noselect function
 \DeclareRobustCommand\noselect[1]{\BeginAccSupp{method=plain,ActualText={}}#1\EndAccSupp{}}
+
+% disable hyphenation
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 % remove the numbering of the algorithm
 \DeclareCaptionLabelFormat{algnonumber}{Algorithm}
@@ -228,10 +236,12 @@
 {
   \centerline
   {\LARGE\textbf{Executive Summary}}
+  \justify\begin{adjustwidth}{1cm}{1cm}
   \begin{quote}
 }
 {
   \end{quote}
+  \end{adjustwidth}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
