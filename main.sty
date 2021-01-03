@@ -141,7 +141,6 @@
 \cfoot{\textcolor{c070}{\noselect{
 }}}
 \rfoot{\textcolor{c070}{\noselect{
-  \today
 }}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,8 +165,7 @@
     \renewcommand{\thefootnote}{\fnsymbol{footnote}}
     % for perfect author name centering
     \renewcommand{\@makefnmark}{\hbox to \z@{$^{\@thefnmark}$\hss}}
-    % the footnote-mark was overlapping the footnote-text,
-    % added the following to fix this problem
+    % fix the footnote-mark overlapping footnote-text
     \long\def\@makefntext##1{%
       \parindent 1em\noindent
       \hbox to 1.8em{\hss $\m@th ^{\@thefnmark}$}##1
@@ -175,7 +173,6 @@
     \thispagestyle{empty}
     \@maketitle
     \@thanks
-    %\@notice
   \endgroup
   \let\maketitle\relax
   \let\thanks\relax
@@ -206,7 +203,7 @@
 \renewenvironment{abstract}
 {
   \centerline
-  {\LARGE\bfseries\textbf\scshape{EXECUTIVE SUMMARY}}
+  {\LARGE\textbf{Executive Summary}}
   \begin{quote}
 }
 {
